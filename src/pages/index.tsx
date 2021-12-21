@@ -36,7 +36,7 @@ const Home = () => {
   });
 
   const onSubmit = (data: AnyObject) => {
-    makeConverterRequest();
+    converterRequest();
   };
 
   const valuesData = [
@@ -54,7 +54,7 @@ const Home = () => {
     },
   ];
 
-  const makeConverterRequest = async () => {
+  const converterRequest = async () => {
     setLoading(true);
 
     const selectedCurrency = getValues("currency");
