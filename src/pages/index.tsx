@@ -103,7 +103,7 @@ const Home = () => {
         <Title
           size={1}
           variant="h3"
-          content="Informe o valor e a moeda para conversão"
+          content="Insira o valor e a moeda para conversão"
         />
 
         <S.Form>
