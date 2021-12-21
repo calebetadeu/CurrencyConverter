@@ -2,22 +2,22 @@ import React from "react";
 import NumberFormat from "react-number-format";
 import Input from "../../components/Input";
 import Title from "../../components/Title";
-import { ConverterDataProps } from "../../types/converter";
+import { IConverterData } from "../../types/converter";
 import * as S from "./styles";
 
 interface IConversionResultProps {
-  data: ConverterDataProps;
+  data: IConverterData;
   value: string;
 }
 
-const CurrencyResult = ({ data, value }: IConversionResultProps) => {
+const ConversionResult = ({ data, value }: IConversionResultProps) => {
   const getActualDate = () => {
     const date = new Date();
     const day = String(date.getDate()).padStart(2, "0");
-    const year = date.getFullYear();
-    const minutes = date.getMinutes();
-    const hours = date.getHours();
     const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
 
     return `${day}/${month}/${year} ${hours < 10 ? "0" + hours : hours}:${
       minutes < 10 ? "0" + minutes : minutes
@@ -63,4 +63,4 @@ const CurrencyResult = ({ data, value }: IConversionResultProps) => {
   );
 };
 
-export default CurrencyResult;
+export default ConversionResult;

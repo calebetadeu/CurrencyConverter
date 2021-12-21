@@ -1,4 +1,4 @@
-export interface IConverter {
+export type ConverterProps= {
     code: string;
     codein: string;
     name: string;
@@ -12,7 +12,7 @@ export interface IConverter {
     create_date: number;
   }
   
-  export interface IConverterData {
-    [item: string]: IConverter;
+  export interface ConverterDataProps {
+    [item: string]: ConverterProps;
   }
   

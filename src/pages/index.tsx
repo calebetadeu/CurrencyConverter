@@ -11,8 +11,8 @@ import LoadingScreen from "../components/LoadingScreen";
 import Select from "../components/Select";
 import Title from "../components/Title";
 import ConversionResult from "../hooks/UseConversionResult";
-import { IConverterData } from "../interfaces/converter";
 import * as S from "../styles/Pages/Home";
+import { ConverterDataProps } from "../types/converter";
 
 
 
@@ -24,7 +24,7 @@ const schema = yup.object().shape({
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [showResultModule, setShowResultModule] = useState(false);
-  const [resultData, setResultData] = useState({} as IConverterData);
+  const [resultData, setResultData] = useState({} as ConverterDataProps);
 
   const {
     handleSubmit,
@@ -67,13 +67,14 @@ const Home = () => {
       }
     });
 
-    const response = await axios.get<IConverterData>(
+    const response = await axios.get<ConverterDataProps>(
       `https://economia.awesomeapi.com.br/last/${selectedCurrency}-${currencies[0]},${selectedCurrency}-${currencies[1]}
       `
     );
 
     const data = response.data;
 
+    
     setResultData(data);
 
     setShowResultModule(true);
