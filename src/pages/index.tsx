@@ -10,8 +10,8 @@ import Input from "../components/Input";
 import LoadingScreen from "../components/LoadingScreen";
 import Select from "../components/Select";
 import Title from "../components/Title";
+import ConversionResult from "../hooks/UseConversionResult";
 import { IConverterData } from "../interfaces/converter";
-import ConversionResult from "../modules/ConversionResult";
 import * as S from "../styles/Pages/Home";
 
 
@@ -91,14 +91,12 @@ const Home = () => {
         <Title
           size={2.1}
           variant="h2"
-          content="Bem-vindo(a) ao ConversorMoedas!"
+          content="Bem-vindo ao Conversor de Moedas!"
         />
 
         <S.WelcomeText>
-          O aplicativo ConversorMoedas! permite que você converta um valor em
-          real, dólar e euro.
-          <br />
-          Aproveite! =D
+          O aplicativo de Conversor de Moedas
+         
         </S.WelcomeText>
 
      

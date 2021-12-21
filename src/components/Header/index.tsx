@@ -5,7 +5,7 @@ import * as S from "./styles";
 const Header = () => {
   return (
     <S.Container data-testid="headerContainer">
-      <Title size={1.1} content="ConversorMoedas!" />
+      <Title size={1.1} content="Conversor de Moedas" />
     </S.Container>
   );
 };

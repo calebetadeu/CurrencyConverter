@@ -9,7 +9,7 @@ describe("Home", () => {
     render(<Home />);
 
     const subTitle = screen.getByText(
-      "Informe o valor e a moeda para conversão"
+      "Enter the amount and currency for conversion"
     );
     expect(subTitle).toBeInTheDocument();
   });

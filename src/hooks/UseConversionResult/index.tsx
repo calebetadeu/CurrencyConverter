@@ -10,7 +10,7 @@ interface IConversionResultProps {
   value: string;
 }
 
-const ConversionResult = ({ data, value }: IConversionResultProps) => {
+const CurrencyResult = ({ data, value }: IConversionResultProps) => {
   const getActualDate = () => {
     const date = new Date();
     const day = String(date.getDate()).padStart(2, "0");
@@ -63,4 +63,4 @@ const ConversionResult = ({ data, value }: IConversionResultProps) => {
   );
 };
 
-export default ConversionResult;
+export default CurrencyResult;
