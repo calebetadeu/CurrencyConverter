@@ -14,10 +14,10 @@ const CurrencyResult = ({ data, value }: IConversionResultProps) => {
   const getActualDate = () => {
     const date = new Date();
     const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
-    const hours = date.getHours();
     const minutes = date.getMinutes();
+    const hours = date.getHours();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
 
     return `${day}/${month}/${year} ${hours < 10 ? "0" + hours : hours}:${
       minutes < 10 ? "0" + minutes : minutes
