@@ -39,7 +39,7 @@ const Home = () => {
     converterRequest();
   };
 
-  const valuesData = [
+  const formartValuesData = [
     {
       id: "BRL",
       name: "Real",
@@ -61,7 +61,7 @@ const Home = () => {
 
     let currencies: any[] = [];
 
-    valuesData.map((item) => {
+    formartValuesData.map((item) => {
       if (item.id !== selectedCurrency) {
         currencies.push(item.id);
       }
@@ -144,7 +144,7 @@ const Home = () => {
                 required={true}
                 name="currency"
                 onChange={onChange}
-                data={valuesData}
+                data={formartValuesData}
                 data-testid="currency"
               />
             )}

@@ -44,5 +44,5 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Error = styled.span`
-  
+  color:red;
 `;
